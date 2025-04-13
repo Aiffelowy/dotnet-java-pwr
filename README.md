@@ -1,7 +1,6 @@
 # Lab API
 
 I implemented a API client and database storage that interacts with a public API (`jsonplaceholdertypicodecom`) The goal is to fetch posts and their comments and cache them in a local SQLite database
----
 
 ## Classes
 

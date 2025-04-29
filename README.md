@@ -28,6 +28,67 @@ Represents a 2D matrix and provides operations for random generation, multiplica
 
 ## Testing result
 
+### Two Threads
+
+#### Normal, Parallel, and Threads Timing
+
+| Size | Normal | Parallel | Threads |
+| -------| --------| ----------| ---------|
+| 50 | 0 | 3 | 11 |
+| 100 | 4 | 2 | 23 |
+| 150 | 15 | 8 | 15 |
+| 250 | 77 | 39 | 45 |
+| 500 | 629 | 327 | 318 |
+| 1000 | 6183 | 2973 | 2586 |
+| 2000 | 54611 | 27181 | 25559 |
+
+---
+
+### Four Threads
+
+#### Parallel and Threads Timing
+
+| Size | Parallel | Threads |
+| -------| ----------| ---------|
+| 50 | 1 | 11 |
+| 100 | 1 | 30 |
+| 150 | 4 | 19 |
+| 250 | 21 | 39 |
+| 500 | 182 | 173 |
+| 1000 | 1587 | 1389 |
+| 2000 | 14697 | 13052 |
+
+---
+
+### Eight Threads
+
+#### Parallel and Threads Timing
+
+| Size | Parallel | Threads |
+| -------| ----------| ---------|
+| 50 | 2 | 23 |
+| 100 | 1 | 33 |
+| 150 | 2 | 39 |
+| 250 | 17 | 59 |
+| 500 | 118 | 139 |
+| 1000 | 1057 | 888 |
+| 2000 | 9515 | 8252 |
+
+---
+
+### Sixteen Threads
+
+#### Parallel and Threads Timing
+
+| Size | Parallel | Threads |
+| -------| ----------| ---------|
+| 50 | 2 | 49 |
+| 100 | 3 | 53 |
+| 150 | 4 | 68 |
+| 250 | 13 | 114 |
+| 500 | 99 | 197 |
+| 1000 | 831 | 770 |
+| 2000 | 7604 | 7029 |
 
 
 
@@ -82,3 +143,7 @@ Provides image filters that can be applied to bitmaps.
 - `static Pixel mirror(Pixel orig_pixel, BitmapInfo source_info)`: Mirrors the pixel horizontally
 - `static Pixel negative(Pixel orig_pixel, BitmapInfo source_info)`: Inverts the pixels color
 - `static Bitmap detect_edges(Bitmap source)`: Applies Sobel edge detection to a bitmap
+
+
+# GUI
+I also written a simple GUI that shows an image before and after applying the filters. All the filters are applied in parallel using `Threads`. The image can be picked using `OpenFileDialog`

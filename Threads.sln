@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Threads", "Threads\Threads.csproj", "{2214448E-84AA-45C0-9423-7107E720934C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageProcessing", "ImageProcessing\ImageProcessing.csproj", "{EFBB5572-B512-495B-879F-83239E588834}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2214448E-84AA-45C0-9423-7107E720934C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2214448E-84AA-45C0-9423-7107E720934C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2214448E-84AA-45C0-9423-7107E720934C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2214448E-84AA-45C0-9423-7107E720934C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFBB5572-B512-495B-879F-83239E588834}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFBB5572-B512-495B-879F-83239E588834}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFBB5572-B512-495B-879F-83239E588834}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFBB5572-B512-495B-879F-83239E588834}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB06A884-DF9C-4F1F-A88C-743C1BD8C977}
+	EndGlobalSection
+EndGlobal

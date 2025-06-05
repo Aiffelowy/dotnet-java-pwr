@@ -3,12 +3,32 @@
  */
 package org.example;
 
-public class App {
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+public class App extends Application {
+  @Override
+  public void start(Stage primary) throws Exception {
+    MyLogger.logger().info("Starting...");
+    var loader = new FXMLLoader(getClass().getResource("/main.fxml"));
+    Parent root = loader.load();
+
+    ((AppController) loader.getController()).init(primary);
+
+    primary.setTitle("YOU BETTER FUCKING WORK");
+    primary.setScene(new Scene(root, 1400, 1200));
+    primary.show();
+  }
+
+  @Override
+  public void stop() {
+    MyLogger.logger().info("Closing...");
+  }
+
   public static void main(String args[]) {
-    var problem = new org.example.Problem(1, 10, 69);
-    problem.generate(5);
-    var solution = problem.solve(50);
-    System.out.println(problem);
-    System.out.println(solution);
+    launch(args);
   }
 }

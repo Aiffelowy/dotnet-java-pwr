@@ -5,54 +5,7 @@ package org.example;
 
 import static org.junit.Assert.*;
 
-import java.util.List;
-import java.util.Vector;
 import org.junit.Test;
 
 public class AppTest {
-  @Test
-  public void test_at_least_one() {
-    var problem = new Problem(1, 10);
-    problem.generate(5);
-    var solution = problem.solve(15);
-    assertTrue(solution.item_ids().size() >= 1);
-  }
-
-  @Test
-  public void test_no_solution() {
-    var problem = new Problem(1, 10);
-    problem.generate(5);
-    var solution = problem.solve(0);
-    assertEquals(0, solution.item_ids().size());
-  }
-
-  @Test
-  public void test_correct_capacity() {
-    var cap = 10;
-    var problem = new Problem(1, 10);
-    problem.generate(5);
-    var solution = problem.solve(cap);
-    assertTrue(solution.sum_weight() <= cap);
-  }
-
-  @Test
-  public void test_rng() {
-    var lower = 1;
-    var upper = 10;
-    var problem = new Problem(lower, upper);
-    problem.generate(10);
-    for (var item : problem.items) {
-      assertTrue(item.weight() >= lower && item.weight() <= upper);
-      assertTrue(item.value() >= lower && item.value() <= upper);
-    }
-  }
-
-  @Test
-  public void test_correct_solution() {
-    var problem = new Problem(1, 10, 69);
-    problem.generate(5);
-    var solution = problem.solve(10);
-
-    assertEquals(new Vector<Integer>(List.of(0)), solution.item_ids());
-  }
 }

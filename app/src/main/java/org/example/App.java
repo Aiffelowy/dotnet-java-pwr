@@ -16,9 +16,9 @@ public class App extends Application {
     var loader = new FXMLLoader(getClass().getResource("/main.fxml"));
     Parent root = loader.load();
 
-    ((AppController) loader.getController()).init(primary);
+    ((AppController)loader.getController()).init(primary);
 
-    primary.setTitle("YOU BETTER FUCKING WORK");
+    primary.setTitle("Image Processing App");
     primary.setScene(new Scene(root, 1400, 1200));
     primary.show();
   }
@@ -28,7 +28,5 @@ public class App extends Application {
     MyLogger.logger().info("Closing...");
   }
 
-  public static void main(String args[]) {
-    launch(args);
-  }
+  public static void main(String args[]) { launch(args); }
 }
